@@ -9,7 +9,7 @@ console.log("Hola Mundo");
 
 /*Mostrar un mensaje en una ventana emergente */
 
-//alert("Hola comisión 18i");
+//alert("Hola comisión 18i");!!!!!!!!!!!!!!!!!!!!1
 
 //crear (o declarar O Inicializar) una variable (var - let - const)
 

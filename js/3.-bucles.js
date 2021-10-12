@@ -13,13 +13,15 @@
 /*1.-while*/ 
 
 
-/*(condicion logica) {
+/*while(condicion logica) {
     todas las lineas de codigo que quiero que se repitan
 }
 PENSAR Condición lógica y ver CÓMO HACER QUE SE DETENGA.
 
 */
 
+
+//CÓMO MOSTRAR UN ELEMENTO 50 VECES
 //let contador = 1;
 
  //while (contador <= 50){

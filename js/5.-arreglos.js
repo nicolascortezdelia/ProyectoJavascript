@@ -54,9 +54,17 @@ for(let posicion = 0; posicion < series.length ; posicion++){
 //Cómo cambiar el valor de un Arreglo
 
 series[4] = "Friends";
-document.write("<br><b>Cambiar el valor de un elemento de un Arreglo</b><br><hr>");
+mostrarArreglo("Cambiar el valor de un elemento de un Arreglo");
+for(let posicion = 0; posicion < series.length ; posicion++){
+    document.write("<br>" +series[posicion]);
+}
+
+
+function mostrarArreglo(titulo){
+    document.write("<br><b>"+titulo+"</b><br><hr>");
 
 for(let posicion = 0; posicion < series.length ; posicion++){
     document.write("<br>" +series[posicion]);
 }
 
+}

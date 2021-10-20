@@ -56,6 +56,18 @@ delete usuarioJony.estado;
 
 usuarioJony.login()
 
+//CÓMO MOSTRAR//recorrer LAS PROPIEDADES DEL OBJETO
+
+let claves = Object.keys(usuarioJony)
+
+console.log(claves)
+
+for(let posicion=0 ;posicion< claves.length ; posicion++){
+    //document.write("<br>" + claves[posicion] )
+    document.write("<br>" + claves[posicion] +":" + usuarioJony[claves[posicion]])
+}
+
+
 
 
 

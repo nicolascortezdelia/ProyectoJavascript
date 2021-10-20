@@ -41,7 +41,7 @@ document.write("<br>Nombre: "+ usuarioJony["nombre"]);
 
 //¿cómo MODIFICAR una propiedad del objeto???
 
-usuarioJony.localidad = "2000"
+usuarioJony.localidad = "5000"
 document.write("<br>Localidad: "+ usuarioJony.localidad);
 
 //¿¿¿¿¿CÓMO AGREGAR UNA NUEVA Propiedad al OBJETO???

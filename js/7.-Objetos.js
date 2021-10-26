@@ -58,10 +58,10 @@ usuarioJony.login()
 
 //CÓMO MOSTRAR//recorrer LAS PROPIEDADES DEL OBJETO
 
-let claves = Object.keys(usuarioJony)
+let claves = Object.keys(usuarioJony)//------>esto nos devuelve un ARREGLO [] con las claves---->["localidad", "mail"]
 
 console.log(claves)
-
+//Bucle para RECORRER el Arreglo[] ""claves"". cuando no sé cuántas claves tiene mi objeto.
 for(let posicion=0 ;posicion< claves.length ; posicion++){
     //document.write("<br>" + claves[posicion] )
     document.write("<br>" + claves[posicion] +":" + usuarioJony[claves[posicion]])

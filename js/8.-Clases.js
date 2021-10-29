@@ -5,7 +5,8 @@
 class Persona {
     //primer método a crear= MÉTODO CONSTRUCTOR, 
     //su misión es CREAR objetos
-    constructor(paramNombre, apellido, email, edad, direccion, fotoPerfil, dni){
+    constructor(paramNombre, apellido, email, edad, direccion, fotoPerfil, dni)//estos son los PARÁMETROS de la función "Método constructor"
+    {
         //construir las propiedades
         //this: ESTE objeto . "nombre de la clave" = el valor de esa clave va a ser el parámetro "nombre"""
         this.nombre = paramNombre;
@@ -45,7 +46,7 @@ class Persona {
         return this.apellido;
     }
 
-    //set
+    //set!!!!!
     set modificarNombre (nuevoNombre){
         this.nombre = nuevoNombre;
 
@@ -57,21 +58,49 @@ class Persona {
 
 }
 
-//HERENCIA!!!!!!!!!
+/////!!!!!!HERENCIA!!!!!!!!!
 
 class Alumno extends Persona {
     //método constructor de la Clase "Alumno"
     //crea objeto
     //asigna valor a las propiedades
     constructor(paramNombre, apellido, email, edad, direccion, fotoPerfil, dni, curso, legajo){
-    //invoco al constructor de la clase persona
+    //invoco al constructor de la clase Persona
     super(paramNombre, apellido, email, edad, direccion, fotoPerfil, dni, curso, legajo);
     
     //agregar NUEVAS propiedades
-    this.curso = paramCurso;
-    this.legalo = paramLegajo;
+    this.curso = curso;
+    this.legajo = legajo;
     this.calificaciones = [];
 }
+
+get mostrarLegajo(){
+    return this.legajo;
+}
+
+mostrarDatos(){//un método sin parámetro porque, en este caso, no recibirá datos de afuera
+        
+    
+    document.write(`<br>Nombre: ${this.nombre} 
+    <br>Apellido: ${this.apellido}
+    <br>Email: ${this.email}
+    
+    <br>Dirección: ${this.direcion}
+    <br>DNI: ${this.dni}`)
+}
+
+mostrarDatosAlumno(){//un método sin parámetro porque, en este caso, no recibirá datos de afuera
+        
+   
+    document.write(`<br>Curso:${this.curso} 
+    <br>Legajo: ${this.legajo}`)
+}
+
+
+
+
+
+
 
 
 }
@@ -97,9 +126,11 @@ listaPersonas.push(axel);
 
 console.log(listaPersonas);
 
+//UN BUCLE para recorrer el Array[]
+
 for (let i=0; i<listaPersonas.length; i++){
-    console.log(listaPersonas[i])
-    listaPersonas[i].mostrarDatos();
+    console.log(listaPersonas[i])//mostrame el array[] por la consola
+    listaPersonas[i].mostrarDatos()//mostrame cada uno de los elemenos que tiene el array[] en la pantalla con un document.write;
 }
 
 
@@ -124,11 +155,11 @@ luciana.modificarNombre = "Lu";
 document.write(`<h6>Nombre: ${luciana.mostrarNombre} </h6>`)
 
 
+//crear un objeto{} de la Clase Alumno QUE ES LA HERENCIA de la Clase Persona
 
+let ramiro = new Alumno("Ramiro","Pérez","gordoperez@gmail",28,"casa del gordo perez","url",37373737,"FullStack",123);
 
+document.write("<br>"+ ramiro.mostrarLegajo)
 
-
-
-
-
-
+ramiro.mostrarDatos() 
+ramiro.mostrarDatosAlumno()

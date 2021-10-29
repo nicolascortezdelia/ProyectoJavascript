@@ -14,7 +14,7 @@ let usuarioJony = {
     localidad: "4000",
     estado: true,
 
-    //métodos o funciones
+    //métodos o funciones//ACCIONES
     /*login: function () {
         document.write("<br>Usuario logueado");
     } */

@@ -1,7 +1,7 @@
 class CuentaBancaria{
-    constructor(titular, saldo){
-        this.titular = titular
-        this.saldo = 0
+    constructor(paramtitular, paramsaldo){
+        this.titular = paramtitular
+        this.saldo = paramsaldo
     }
 
     ingresar (saldo) {//saldo + this.saldo
@@ -25,7 +25,7 @@ class CuentaBancaria{
 
 }
 
-let cuenta = new CuentaBancaria("Alex", 10);
+let cuenta = new CuentaBancaria("Alex", 10)
 
 
 console.log(cuenta)

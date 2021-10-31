@@ -12,11 +12,6 @@ arrancarAuto:(estado)=> { if (estado == "on"){
 } 
 
 
-
-
-
-
-
 }
 
         

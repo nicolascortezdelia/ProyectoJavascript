@@ -6,6 +6,7 @@ class Personas{
         this.peso = paramPeso;
         this.altura = paramAltura;
         this.añoNacimiento = paramAñoNacimiento;
+        this.dni = 0;
     }
 
     mostrarGeneracion(){
@@ -26,12 +27,41 @@ class Personas{
         }
     }
 
-    generarDni(){
-        Math.floor(Math.random() * 5) + 1;
+    mostrarDatosPersona(){
+        document.write(`<br> Nombre : ${this.nombrePersona}
+        <br> Edad: ${this.edadPersona}
+        <br> Sexo: ${this.sexo}
+        <br> Peso: ${this.peso}
+        <br> Altura: ${this.altura}
+        <br> Año de Nacimiento: ${this.añoNacimiento}
+         `)
 
+    }
+
+    generarDni(){
+        this.dni= Math.floor(Math.random() * 99999999) + 1;
+
+    }
+
+    get mostrarDNI(){
+        return this.dni
+    }
+
+    esMayordeEdad(){
+        if(this.edadPersona >= 18){
+            document.write("<br> Es mayor de edad")
+        }
+        else{
+            document.write("<br> Es menor de edad")
+        }
     }
 }
 
-let messi = new Personas("Lionel Andrés", "Messi", "H", "70 kg",1.69,1987)
+let messi = new Personas("Lionel Andrés Messi",34, "H", "70 kg",1.69,1987)
 
 messi.mostrarGeneracion()
+messi.mostrarDatosPersona()
+messi.generarDni()
+
+document.write(`<br>DNI: ${messi.mostrarDNI}</br>`)
+messi.esMayordeEdad();

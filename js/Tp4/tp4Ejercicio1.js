@@ -4,21 +4,37 @@ let auto = {
     modelo: "Fiesta",
     encendido: false,
 
-    arranca: ()=>{
+arrancarAuto:(estado)=> { if (estado == "on"){
+    auto.encendido = true
+} else {
+  if  (estado == "off"){auto.encendido = false}
+  else {alert("Ingrese on o OFF")}
+} 
+
+
+
+
+
+
+
+}
+
+        
+        
+} 
+
+
+
+
+let estado = prompt("Ingrese on / off");
+
+console.log(auto)
+document.write(auto.encendido)
+    /*arranca: ()=>{
         if(auto.encendido == false){
             document.write("<br>no arranca");
         }else{
             document.write("arranca");
         } 
-        
+    }*/
 
-    }
-
-}
-
-console.log(auto);
-auto.arranca();
-//document.write("Arranca? "+ auto.encendido);
-
-//auto.encendido = "5000"
-//document.write("<br>Localidad: "+ usuarioJony.localidad);

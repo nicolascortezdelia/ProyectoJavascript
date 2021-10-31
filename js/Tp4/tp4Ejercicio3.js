@@ -28,6 +28,7 @@ rectangulo1.calculcarPerimetro()
 
 rectangulo1.calcularSuperficie()
 
+
 document.write(`<br> Altura: ${rectangulo1.mostrarAltura}`)
 
 rectangulo1.modificarAltura = 4

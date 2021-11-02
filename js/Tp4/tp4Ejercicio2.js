@@ -1,37 +1,53 @@
-class CuentaBancaria{
-    constructor(paramtitular, paramsaldo){
-        this.titular = paramtitular
-        this.saldo = paramsaldo
+/*Escribe un programa que cree un objeto "cuenta" con las siguientes propiedades:
+Una propiedad titular con el valor "Alex".
+Una propiedad saldo, teniendo como valor inicial 0.
+
+Un método ingresar() que permita añadir dinero a la cuenta, pasando la cantidad como parámetro
+Un método extraer() que permita retirar la cantidad pasada como parámetro.
+Un método informar() que retorne la información del estado de la cuenta. 
+
+Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y volver a mostrar la descripción del estado de la cuenta.
+*/ 
+
+let cuenta = {
+    
+        titular:"Alex",
+        saldo: 0,
+    
+    ingresar:(cantidad)=>{  
+        cuenta.saldo = cuenta.saldo + cantidad;
+
+    },
+
+    extraer: (montoExtraer)=>{
+        cuenta.saldo = cuenta.saldo - montoExtraer;
+    },
+
+    informar:()=>{
+        document.write('<br>Saldo actualizado: '+cuenta.saldo+'<br>');
+    },
+
+    descripcion: ()=>{
+        document.write(`<br>Titular: ${cuenta.titular}  
+        <br>Saldo: ${cuenta.saldo}`)
     }
-
-    ingresar (saldo) {//saldo + this.saldo
-        this.saldo = saldo;
-
-    };
-
-    //this.saldo hacer una resta 
-
-    //informar document.write que muestre el saldo
-
-    
-
-    
-
-    
-
-
-
 
 
 }
 
-let cuenta = new CuentaBancaria("Alex", 10)
+ 
 
+console.log(cuenta);
 
-console.log(cuenta)
+cuenta.descripcion();
 
+let cantidad = parseInt(prompt("Ingrese el valor a depositar"));
 
+let montoExtraer = parseInt(prompt("Ingrese el monto a extraer"));
 
+cuenta.ingresar(cantidad);
 
+cuenta.extraer(montoExtraer);
+cuenta.informar();
 
 
